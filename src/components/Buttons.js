@@ -1,7 +1,7 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const primaryColor = "#1c5391"
+const secondaryColor = '#7090b5'
 
 const Button = styled.button`
   padding: 12px 24px;
@@ -18,4 +18,12 @@ const PrimaryButton = styled(Button)`
   background-color: ${primaryColor};
 `
 
-export default PrimaryButton
+const SecondaryButton = styled(Button)`
+  border: 3px solid ${primaryColor};
+`
+
+const TertiaryButton = styled(Button)`
+  border: 3px solid ${secondaryColor};
+`
+
+export {PrimaryButton, SecondaryButton, TertiaryButton}
