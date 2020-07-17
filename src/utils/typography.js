@@ -1,6 +1,6 @@
-export const primaryFont = "'Cabin', monospace"
+const primaryFont = "'Cabin', monospace"
 
-export const typeScale = {
+const typeScale = {
   header1: "1.8rem",
   header2: "1.6rem",
   header3: "1.4rem",
@@ -10,3 +10,5 @@ export const typeScale = {
   helperText: "0.8rem",
   copyrightText: "0.7rem"
 }
+
+export {primaryFont, typeScale}

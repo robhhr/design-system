@@ -1,11 +1,9 @@
 import styled from 'styled-components'
-
-const primaryColor = "#1c5391"
-const secondaryColor = '#7090b5'
+import {defaultTheme, typeScale} from '../utils'
 
 const Button = styled.button`
   padding: 12px 24px;
-  font-size: 1rem;
+  font-size: ${typeScale.paragraph};
   font-family: "Cabin", monospace;
   cursor: pointer;
   min-width: 100px;
@@ -15,15 +13,15 @@ const Button = styled.button`
 const PrimaryButton = styled(Button)`
   border: none;
   color: #FFF;
-  background-color: ${primaryColor};
+  background-color: ${defaultTheme.primaryColor};
 `
 
 const SecondaryButton = styled(Button)`
-  border: 3px solid ${primaryColor};
+  border: 3px solid ${defaultTheme.primaryColor};
 `
 
 const TertiaryButton = styled(Button)`
-  border: 3px solid ${secondaryColor};
+  border: 3px solid ${defaultTheme.secondaryColor};
 `
 
 export {PrimaryButton, SecondaryButton, TertiaryButton}

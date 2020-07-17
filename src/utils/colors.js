@@ -1,4 +1,4 @@
-const blue = {
+ const blue = {
   100: "#549beb",
   200: "#1c5391",
   300: "#609fe6",
