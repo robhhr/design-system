@@ -11,4 +11,8 @@ const defaultTheme = {
  primaryFont
 }
 
+<<<<<<< HEAD
 export {defaultTheme}
+=======
+export default defaultTheme
+>>>>>>> a60bca706f07060436442da10214b804338bcbaf
