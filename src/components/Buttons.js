@@ -4,7 +4,7 @@ import {defaultTheme, typeScale} from '../utils'
 const Button = styled.button`
   padding: 12px 24px;
   font-size: ${typeScale.paragraph};
-  font-family: "Cabin", monospace;
+  font-family: 'Cabin', monospace;
   cursor: pointer;
   min-width: 100px;
   border-radius: 5px;
@@ -12,7 +12,7 @@ const Button = styled.button`
 
 const PrimaryButton = styled(Button)`
   border: none;
-  color: #FFF;
+  color: #fff;
   background-color: ${defaultTheme.primaryColor};
 `
 
