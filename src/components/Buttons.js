@@ -11,6 +11,65 @@ const BUTTON_MODS = {
     font-size: ${typeScale.paragraph}
     padding: 16px 24px
   `,
+  warning: () => `
+    background-color: ${defaultTheme.status.warningColor};
+    color: ${defaultTheme.textColorInverted};
+
+    &:hover, &:focus {
+      background-color: ${defaultTheme.status.warningColorHover};
+      outline: 3px solid ${defaultTheme.status.warningColorActive};
+      border: none;
+    }
+
+    &:active {
+      background-color: ${defaultTheme.status.warningColorActive};
+    }
+  `,
+  warningPrimary: () => `
+    background: none;
+    border: 2px solid ${defaultTheme.status.warningColor};
+    color: ${defaultTheme.status.warningColor};
+  `,
+  warningSecondary: () => `
+    background: none;
+    border: 2px solid ${defaultTheme.status.warningColor};
+    color: ${defaultTheme.status.warningColor};
+  `,
+  warningTertiary: () => `
+    background: none;
+    border: 2px solid ${defaultTheme.status.warningColor};
+    color: ${defaultTheme.textColorOnPrimary}
+  `,
+  error: () => `
+    background-color: ${defaultTheme.status.errorColor};
+    color: ${defaultTheme.textColorInverted};
+    border: 1px solid ${defaultTheme.status.errorColor};
+
+      &:hover, &:focus {
+        background-color: ${defaultTheme.status.errorColorHover};
+        outline: 3px solid ${defaultTheme.status.errorColorActive};
+        border: none;
+      };
+
+      &:active {
+        background-color: ${defaultTheme.status.errorColorActive}
+      }
+  `,
+  success: () => `
+    background-color: ${defaultTheme.status.successColor};
+    color: ${defaultTheme.textColorInverted};
+    border: 1px solid ${defaultTheme.status.successColor};
+
+      &:hover, &:focus {
+        background-color: ${defaultTheme.status.successColorHover};
+        outline: 3px solid ${defaultTheme.status.successColorActive};
+        border: none;
+      };
+
+      &:active {
+        background-color: ${defaultTheme.status.successColorActive}
+      }
+  `,
 }
 
 const Button = styled.button`

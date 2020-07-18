@@ -9,9 +9,11 @@ import {GlobalStyle} from './utils'
 
 const App = () => (
   <>
-    <PrimaryButton modifiers="small">Hello World</PrimaryButton>
-    <SecondaryButton modifiers="lage">Hello World</SecondaryButton>
-    <TertiaryButton modifiers="small">Hello World</TertiaryButton>
+    <PrimaryButton modifiers={['small', 'success']}>Hello World</PrimaryButton>
+    <SecondaryButton modifiers={['lage', 'warning', 'warningSecondary']}>
+      Hello World
+    </SecondaryButton>
+    <TertiaryButton modifiers={['small', 'error']}>Hello World</TertiaryButton>
     <GlobalStyle />
   </>
 )
