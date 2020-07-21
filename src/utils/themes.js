@@ -26,11 +26,11 @@ const defaultTheme = {
 }
 
 const darkTheme = {
-  primaryColor: neutral[100],
+  primaryColor: neutral[600],
   primaryColorHover: neutral[200],
   primaryColorActive: neutral[100],
   textOnDisabled: neutral[300],
-  textColorOnPrimary: blue[300],
+  textColorOnPrimary: neutral[400],
   textColor: blue[300],
   textColorInverted: neutral[100],
   primaryFont,
