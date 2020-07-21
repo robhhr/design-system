@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {typeScale} from '../utils'
+import {typeScale, defaultTheme} from '../utils'
 import {applyStyleModifiers} from 'styled-components-modifiers'
 
 const BUTTON_MODS = {
@@ -8,8 +8,8 @@ const BUTTON_MODS = {
     padding: 8px;
   `,
   large: () => `
-    font-size: ${typeScale.paragraph}
-    padding: 16px 24px
+    font-size: ${typeScale.paragraph};
+    padding: 16px 24px;
   `,
   warning: ({props}) => `
     background-color: ${props.theme.status.warningColor};
@@ -52,7 +52,7 @@ const BUTTON_MODS = {
       };
 
       &:active {
-        background-color: ${props.theme.status.errorColorActive}
+        background-color: ${defaultTheme.status.errorColorActive}
       }
   `,
   success: ({props}) => `
@@ -82,29 +82,29 @@ const Button = styled.button`
   transition: background-color 0.2s linear, color 0.2s linear;
 
   &:hover {
-    background-color: ${props => props.primaryColorHover};
-    color: ${props => props.textColorOnPrimary};
+    background-color: ${props => props.theme.primaryColorHover};
+    color: ${props => props.theme.textColorOnPrimary};
   }
   &:focus {
-    background-color: ${props => props.primaryColorHover};
-    color: ${props => props.textColorOnPrimary};
-    border: 3px solid ${props => props.primaryColor};
+    background-color: ${props => props.theme.primaryColorHover};
+    color: ${props => props.theme.textColorOnPrimary};
+    border: 3px solid ${props => props.theme.primaryColor};
   }
   &:active {
-    background-color: ${props => props.primaryColorActive};
-    color: ${props => props.textColorOnPrimary};
+    background-color: ${props => props.theme.primaryColorActive};
+    color: ${props => props.theme.textColorOnPrimary};
   }
 `
 
 const PrimaryButton = styled(Button)`
-  border: 3px solid ${props => props.primaryColor};
+  border: 3px solid ${props => props.theme.primaryColor};
   color: #fff;
-  background-color: ${props => props.primaryColor};
+  background-color: ${props => props.theme.primaryColor};
 
   &:disabled {
     border: none;
-    background-color: ${props => props.disabled};
-    color: ${props => props.textOnDisabled};
+    background-color: ${props => props.theme.disabled};
+    color: ${props => props.theme.textOnDisabled};
     cursor: not-allowed;
   }
 
@@ -112,22 +112,22 @@ const PrimaryButton = styled(Button)`
 `
 
 const SecondaryButton = styled(Button)`
-  border: 3px solid ${props => props.primaryColor};
+  border: 3px solid ${props => props.theme.primaryColor};
   &:disabled {
     background: none;
-    border: 1px solid ${props => props.disabled};
-    color: ${props => props.disabled};
+    border: 1px solid ${props => props.theme.disabled};
+    color: ${props => props.theme.disabled};
     cursor: not-allowed;
   }
   ${applyStyleModifiers(BUTTON_MODS)}
 `
 
 const TertiaryButton = styled(Button)`
-  border: 3px solid ${props => props.secondaryColor};
+  border: 3px solid ${props => props.theme.secondaryColor};
   &:disabled {
     border: none;
     background: none;
-    color: ${props => props.disabled};
+    color: ${props => props.theme.disabled};
     cursor: not-allowed;
   }
   ${applyStyleModifiers(BUTTON_MODS)}

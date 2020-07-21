@@ -17,21 +17,9 @@ const App = () => {
         Dark Mode
       </ThemeToggler>
       {isDarkTheme ? <p>Dark Theme Enabled</p> : <p>Dark Theme Disabled</p>}
-      <div
-        style={{
-          background: isDarkTheme
-            ? defaultTheme.primaryColor
-            : darkTheme.primaryColor,
-          width: '100vw',
-          height: '90vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-around',
-        }}
-      ></div>
-      <PrimaryButton>Hello World</PrimaryButton>
-      <SecondaryButton>Hello World</SecondaryButton>
-      <TertiaryButton>Hello World</TertiaryButton>
+      <PrimaryButton>Primary Button</PrimaryButton>
+      <SecondaryButton>Secondary Button</SecondaryButton>
+      <TertiaryButton>Tertiary Button</TertiaryButton>
       <GlobalStyle />
     </ThemeProvider>
   )
