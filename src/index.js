@@ -5,22 +5,33 @@ import {
   PrimaryButton,
   SecondaryButton,
   TertiaryButton,
-} from './components/Buttons'
+  ThemeToggler,
+} from './components'
 import {GlobalStyle, darkTheme, defaultTheme} from './utils'
 
 const App = () => {
-  const [darkTheme, setDarkTheme] = useState(false)
+  const [isDarkTheme, setIsDarkTheme] = useState(false)
   return (
-    <ThemeProvider theme={darkTheme ? darkTheme : defaultTheme}>
-      <PrimaryButton modifiers={['small', 'success']}>
-        Hello World
-      </PrimaryButton>
-      <SecondaryButton modifiers={['lage', 'warning', 'warningSecondary']}>
-        Hello World
-      </SecondaryButton>
-      <TertiaryButton modifiers={['small', 'error']}>
-        Hello World
-      </TertiaryButton>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : defaultTheme}>
+      <ThemeToggler onClick={() => setIsDarkTheme(!isDarkTheme)}>
+        Dark Mode
+      </ThemeToggler>
+      {isDarkTheme ? <p>Dark Theme Enabled</p> : <p>Dark Theme Disabled</p>}
+      <div
+        style={{
+          background: isDarkTheme
+            ? defaultTheme.primaryColor
+            : darkTheme.primaryColor,
+          width: '100vw',
+          height: '90vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-around',
+        }}
+      ></div>
+      <PrimaryButton>Hello World</PrimaryButton>
+      <SecondaryButton>Hello World</SecondaryButton>
+      <TertiaryButton>Hello World</TertiaryButton>
       <GlobalStyle />
     </ThemeProvider>
   )

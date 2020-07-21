@@ -11,63 +11,63 @@ const BUTTON_MODS = {
     font-size: ${typeScale.paragraph}
     padding: 16px 24px
   `,
-  warning: ({theme}) => `
-    background-color: ${theme.status.warningColor};
-    color: ${theme.textColorInverted};
+  warning: ({props}) => `
+    background-color: ${props.theme.status.warningColor};
+    color: ${props.theme.textColorInverted};
 
     &:hover, &:focus {
-      background-color: ${theme.status.warningColorHover};
-      outline: 3px solid ${theme.status.warningColorActive};
+      background-color: ${props.theme.status.warningColorHover};
+      outline: 3px solid ${props.theme.status.warningColorActive};
       border: none;
     }
 
     &:active {
-      background-color: ${theme.status.warningColorActive};
+      background-color: ${props.theme.status.warningColorActive};
     }
   `,
-  warningPrimary: ({theme}) => `
+  warningPrimary: ({props}) => `
     background: none;
-    border: 2px solid ${theme.status.warningColor};
-    color: ${theme.status.warningColor};
+    border: 2px solid ${props.theme.status.warningColor};
+    color: ${props.theme.status.warningColor};
   `,
-  warningSecondary: ({theme}) => `
+  warningSecondary: ({props}) => `
     background: none;
-    border: 2px solid ${theme.status.warningColor};
-    color: ${theme.status.warningColor};
+    border: 2px solid ${props.theme.status.warningColor};
+    color: ${props.theme.status.warningColor};
   `,
-  warningTertiary: ({theme}) => `
+  warningTertiary: ({props}) => `
     background: none;
-    border: 2px solid ${theme.status.warningColor};
-    color: ${theme.textColorOnPrimary}
+    border: 2px solid ${props.theme.status.warningColor};
+    color: ${props.theme.textColorOnPrimary}
   `,
-  error: ({theme}) => `
-    background-color: ${theme.status.errorColor};
-    color: ${theme.textColorInverted};
-    border: 1px solid ${theme.status.errorColor};
+  error: ({props}) => `
+    background-color: ${props.theme.status.errorColor};
+    color: ${props.theme.textColorInverted};
+    border: 1px solid ${props.theme.status.errorColor};
 
       &:hover, &:focus {
-        background-color: ${theme.status.errorColorHover};
-        outline: 3px solid ${theme.status.errorColorActive};
+        background-color: ${props.theme.status.errorColorHover};
+        outline: 3px solid ${props.theme.status.errorColorActive};
         border: none;
       };
 
       &:active {
-        background-color: ${theme.status.errorColorActive}
+        background-color: ${props.theme.status.errorColorActive}
       }
   `,
-  success: ({theme}) => `
-    background-color: ${theme.status.successColor};
-    color: ${theme.textColorInverted};
-    border: 1px solid ${theme.status.successColor};
+  success: ({props}) => `
+    background-color: ${props.theme.status.successColor};
+    color: ${props.theme.textColorInverted};
+    border: 1px solid ${props.theme.status.successColor};
 
       &:hover, &:focus {
-        background-color: ${theme.status.successColorHover};
-        outline: 3px solid ${theme.status.successColorActive};
+        background-color: ${props.theme.status.successColorHover};
+        outline: 3px solid ${props.theme.status.successColorActive};
         border: none;
       };
 
       &:active {
-        background-color: ${theme.status.successColorActive}
+        background-color: ${props.theme.status.successColorActive}
       }
   `,
 }
