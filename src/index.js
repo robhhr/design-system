@@ -6,6 +6,7 @@ import {
   SecondaryButton,
   TertiaryButton,
   ThemeToggler,
+  SignUpModal,
 } from './components'
 import {GlobalStyle, darkTheme, defaultTheme} from './utils'
 
@@ -20,6 +21,7 @@ const App = () => {
       <PrimaryButton>Primary Button</PrimaryButton>
       <SecondaryButton>Secondary Button</SecondaryButton>
       <TertiaryButton>Tertiary Button</TertiaryButton>
+      <SignUpModal />
       <GlobalStyle />
     </ThemeProvider>
   )
