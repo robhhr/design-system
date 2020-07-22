@@ -15,6 +15,7 @@ const ModalWrapper = styled.div`
   align-items: center;
   position: relative;
   border-radius: 2px;
+  padding: 30px 0;
 `
 const SignUpTitle = styled.h1`
   font-size: ${typeScale.header1};
@@ -27,7 +28,11 @@ const SignUpText = styled.h4`
 const SignUpModal = () => {
   return (
     <ModalWrapper>
-      <CloseIcon aria-hidden="true" cursor="pointer" />
+      <CloseIcon
+        aria-hidden="true"
+        cursor="pointer"
+        style={{position: 'absolute', top: '15px', right: '15px'}}
+      />
       <SignUp />
       <SignUpTitle>Sign up today!</SignUpTitle>
       <SignUpText>Save your preferences anywhere</SignUpText>
