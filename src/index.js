@@ -5,7 +5,7 @@ import {
   PrimaryButton,
   SecondaryButton,
   TertiaryButton,
-  ThemeToggler,
+  Toggle,
   SignUpModal,
 } from './components'
 import {GlobalStyle, darkTheme, defaultTheme} from './utils'
@@ -14,9 +14,7 @@ const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : defaultTheme}>
-      <ThemeToggler onClick={() => setIsDarkTheme(!isDarkTheme)}>
-        Dark Mode
-      </ThemeToggler>
+      <Toggle onClick={() => setIsDarkTheme(!isDarkTheme)}>Dark Mode</Toggle>
       {isDarkTheme ? <p>Dark Theme Enabled</p> : <p>Dark Theme Disabled</p>}
       <PrimaryButton>Primary Button</PrimaryButton>
       <SecondaryButton>Secondary Button</SecondaryButton>

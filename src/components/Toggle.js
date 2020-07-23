@@ -7,8 +7,8 @@ const Toggler = styled.button`
   background: none;
 `
 
-const ThemeToggler = ({onClick, children}) => {
+const Toggle = ({onClick, children}) => {
   return <Toggler onClick={onClick}>{children}</Toggler>
 }
 
-export {ThemeToggler}
+export {Toggle}
