@@ -12,7 +12,7 @@ import {GlobalStyle, darkTheme, defaultTheme} from './utils'
 
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(true)
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : defaultTheme}>
       <Toggle onClick={() => setIsDarkTheme(!isDarkTheme)}>
@@ -21,10 +21,6 @@ const App = () => {
       <Toggle onClick={() => setShowModal(!showModal)}>
         {showModal ? 'Hide Modal' : 'Toggle Modal'}
       </Toggle>
-      {isDarkTheme ? <p>Dark Theme Enabled</p> : <p>Dark Theme Disabled</p>}
-      <PrimaryButton>Primary Button</PrimaryButton>
-      <SecondaryButton>Secondary Button</SecondaryButton>
-      <TertiaryButton>Tertiary Button</TertiaryButton>
       <SignUpModal showModal={showModal} setShowModal={setShowModal} />
       <GlobalStyle />
     </ThemeProvider>

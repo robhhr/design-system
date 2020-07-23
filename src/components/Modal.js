@@ -17,6 +17,7 @@ const ModalWrapper = styled.div`
   position: relative;
   border-radius: 2px;
   padding: 30px 0;
+  margin: 0 auto;
 `
 const SignUpTitle = styled.h1`
   font-size: ${typeScale.header1};
