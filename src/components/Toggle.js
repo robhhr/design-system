@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Toggler = styled.button`
-  margin: 0 16px 24px;
+  margin: 15px 10px;
   padding: 8px;
   background: none;
 `

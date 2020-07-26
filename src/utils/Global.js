@@ -3,7 +3,7 @@ import {primaryFont} from './typography'
 import {normalize} from 'polished'
 
 const GlobalStyle = createGlobalStyle`
-  $[normalize()]
+  ${normalize()}
   html {
     font-size: 16px;
     box-sizing: border-box;

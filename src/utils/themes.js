@@ -33,9 +33,9 @@ const darkTheme = {
   primaryColorActive: neutral[100],
   textOnDisabled: neutral[300],
   textColorOnPrimary: neutral[400],
-  textColor: blue[300],
+  textColor: neutral[300],
   textColorInverted: neutral[100],
-  formElementBackground: blue[100],
+  formElementBackground: neutral[500],
   textOnFormElementBackground: neutral[100],
   primaryFont,
   status: {
