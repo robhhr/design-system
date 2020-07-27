@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### Open Project
 
-`npm run`
+`npm start`
 
 #### Open Storybook
 
