@@ -25,7 +25,7 @@ const SignUpTitle = styled.h1`
   color: ${props => props.theme.textColor};
 `
 
-const SignUpText = styled.h4`
+const SignUpText = styled.p`
   font-size: ${typeScale.header4};
   text-align: center;
   color: ${props => props.theme.textColor};
