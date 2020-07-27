@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {useSpring, animated} from 'react-spring'
-import {typeScale} from '../utils'
+import {primaryFont, typeScale} from '../utils'
 import {PrimaryButton} from './Buttons'
 import {CloseIcon, SignUp} from '../assets/'
 
@@ -10,6 +10,7 @@ const ModalWrapper = styled.div`
   height: 500px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
   background-color: ${props => props.theme.formElementBackground};
+  font-family: ${primaryFont};
   display: flex;
   flex-direction: column;
   justify-content: center;
