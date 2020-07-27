@@ -1,5 +1,6 @@
 import {addParameters, addDecorator} from '@storybook/react'
 import {withContexts} from '@storybook/addon-contexts/react'
+import {withKnobs} from '@storybook/addon-knobs'
 import {contexts} from './contexts'
 
 addParameters({
@@ -10,3 +11,4 @@ addParameters({
 })
 
 addDecorator(withContexts(contexts))
+addDecorator(withKnobs)

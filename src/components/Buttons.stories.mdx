@@ -1,5 +1,6 @@
 import {Meta, Story, Preview} from '@storybook/addon-docs/blocks'
 import {action} from '@storybook/addon-actions'
+import {withKnobs, boolean} from '@storybook/addon-knobs'
 import {PrimaryButton, SecondaryButton, TertiaryButton} from './Buttons'
 
 <Meta title="Design System|Buttons" component={PrimaryButton} />
@@ -17,8 +18,8 @@ Buttons are used to trigger internal actions within your web applications.
 Primary buttons are used as a call to action and indicate the most important action on a page.
 
 <Preview withToolbar>
-  <Story name="primary">
-    <PrimaryButton onClick={action('button-click')}>Hello world</PrimaryButton>
+  <Story name="Primary">
+    <PrimaryButton disabled={boolean("Disable Button", false)} onClick={action('button-click')}>Hello world</PrimaryButton>
   </Story>
 </Preview>
 
@@ -26,14 +27,14 @@ Primary buttons are used as a call to action and indicate the most important act
 
 Primary buttons are used as a call to action and indicate the most important action on a page.
 
-<Story name="secondary">
-  <SecondaryButton>Hello world</SecondaryButton>
+<Story name="Secondary">
+  <SecondaryButton disabled={boolean("Disable Button", false)} onClick={action('button-click')}>Hello world</SecondaryButton>
 </Story>
 
 ## Tertiary Buttons
 
 Primary buttons are used as a call to action and indicate the most important action on a page.
 
-<Story name="tertiary">
-  <TertiaryButton>Hello world</TertiaryButton>
+<Story name="Tertiary">
+  <TertiaryButton disabled={boolean("Disable Button", false)} onClick={action('button-click')}>Hello world</TertiaryButton>
 </Story>
