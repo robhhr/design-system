@@ -23,3 +23,5 @@ const contexts = [
     },
   },
 ]
+
+export {contexts}
